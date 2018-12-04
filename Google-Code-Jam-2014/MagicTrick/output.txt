@@ -1,0 +1,100 @@
+Case #1: 14
+Case #2: Volunteer cheated!
+Case #3: Volunteer cheated!
+Case #4: Bad magician!
+Case #5: Bad magician!
+Case #6: Volunteer cheated!
+Case #7: Bad magician!
+Case #8: Bad magician!
+Case #9: 9
+Case #10: Volunteer cheated!
+Case #11: 14
+Case #12: Bad magician!
+Case #13: Volunteer cheated!
+Case #14: 10
+Case #15: Volunteer cheated!
+Case #16: Bad magician!
+Case #17: Bad magician!
+Case #18: Volunteer cheated!
+Case #19: Volunteer cheated!
+Case #20: Volunteer cheated!
+Case #21: 12
+Case #22: Bad magician!
+Case #23: Volunteer cheated!
+Case #24: Volunteer cheated!
+Case #25: Volunteer cheated!
+Case #26: 5
+Case #27: Bad magician!
+Case #28: 8
+Case #29: 12
+Case #30: Volunteer cheated!
+Case #31: Bad magician!
+Case #32: Bad magician!
+Case #33: 11
+Case #34: Volunteer cheated!
+Case #35: Bad magician!
+Case #36: Bad magician!
+Case #37: Volunteer cheated!
+Case #38: 3
+Case #39: Volunteer cheated!
+Case #40: Volunteer cheated!
+Case #41: 11
+Case #42: Bad magician!
+Case #43: Volunteer cheated!
+Case #44: 10
+Case #45: Bad magician!
+Case #46: Bad magician!
+Case #47: Bad magician!
+Case #48: Bad magician!
+Case #49: Volunteer cheated!
+Case #50: Bad magician!
+Case #51: 12
+Case #52: Volunteer cheated!
+Case #53: Bad magician!
+Case #54: Volunteer cheated!
+Case #55: 7
+Case #56: Bad magician!
+Case #57: 5
+Case #58: Volunteer cheated!
+Case #59: 4
+Case #60: 14
+Case #61: 10
+Case #62: 1
+Case #63: Volunteer cheated!
+Case #64: 12
+Case #65: Volunteer cheated!
+Case #66: Volunteer cheated!
+Case #67: Volunteer cheated!
+Case #68: Bad magician!
+Case #69: 2
+Case #70: 11
+Case #71: Volunteer cheated!
+Case #72: Bad magician!
+Case #73: 6
+Case #74: 3
+Case #75: Bad magician!
+Case #76: 16
+Case #77: Volunteer cheated!
+Case #78: Volunteer cheated!
+Case #79: 1
+Case #80: Volunteer cheated!
+Case #81: Bad magician!
+Case #82: Bad magician!
+Case #83: Bad magician!
+Case #84: 10
+Case #85: Bad magician!
+Case #86: 7
+Case #87: Volunteer cheated!
+Case #88: 7
+Case #89: 16
+Case #90: Volunteer cheated!
+Case #91: 4
+Case #92: 7
+Case #93: Volunteer cheated!
+Case #94: Bad magician!
+Case #95: 1
+Case #96: 9
+Case #97: Bad magician!
+Case #98: 10
+Case #99: 4
+Case #100: Volunteer cheated!
