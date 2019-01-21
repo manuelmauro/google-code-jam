@@ -43,12 +43,12 @@ impl CubicUfo {
 
     fn shadow(&self) -> f32 {
         let exagon = vec![
-            self.vertices.get(4).unwrap().clone(),
-            self.vertices.get(5).unwrap().clone(),
-            self.vertices.get(1).unwrap().clone(),
-            self.vertices.get(2).unwrap().clone(),
-            self.vertices.get(3).unwrap().clone(),
-            self.vertices.get(7).unwrap().clone(),
+            self.vertices[4].clone(),
+            self.vertices[5].clone(),
+            self.vertices[1].clone(),
+            self.vertices[2].clone(),
+            self.vertices[3].clone(),
+            self.vertices[7].clone(),
         ];
 
         shoelace(exagon)
@@ -59,15 +59,15 @@ impl CubicUfo {
 impl fmt::Display for CubicUfo {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "{} {} {}\n{} {} {}\n{} {} {}\n",
-            self.base.get(0).unwrap().x,
-            self.base.get(0).unwrap().y,
-            self.base.get(0).unwrap().z,
-            self.base.get(1).unwrap().x,
-            self.base.get(1).unwrap().y,
-            self.base.get(1).unwrap().z,
-            self.base.get(2).unwrap().x,
-            self.base.get(2).unwrap().y,
-            self.base.get(2).unwrap().z,
+            self.base[0].x,
+            self.base[0].y,
+            self.base[0].z,
+            self.base[1].x,
+            self.base[1].y,
+            self.base[1].z,
+            self.base[2].x,
+            self.base[2].y,
+            self.base[2].z,
         )
     }
 }
@@ -77,24 +77,24 @@ fn shoelace(points: Vec<Point3<f32>>) -> f32 {
 
     let mut first = 0.0;
     for i in 0..n - 1 {
-        let x_i = points.get(i).unwrap().x;
-        let z_ip1 = points.get(i + 1).unwrap().z;
+        let x_i = points[i].x;
+        let z_ip1 = points[i + 1].z;
         first += x_i * z_ip1;
     }
 
-    let x_nm1 = points.get(n - 1).unwrap().x;
-    let z_0 = points.get(0).unwrap().z;
+    let x_nm1 = points[n - 1].x;
+    let z_0 = points[0].z;
     let n1 = x_nm1 * z_0;
 
     let mut second = 0.0;
     for i in 0..n - 1 {
-        let x_ip1 = points.get(i + 1).unwrap().x;
-        let z_i = points.get(i).unwrap().z;
+        let x_ip1 = points[i + 1].x;
+        let z_i = points[i].z;
         second += x_ip1 * z_i;
     }
 
-    let x_0 = points.get(0).unwrap().x;
-    let z_nm1 = points.get(n - 1).unwrap().z;
+    let x_0 = points[0].x;
+    let z_nm1 = points[n - 1].z;
     let n1n = x_0 * z_nm1;
 
     0.5 * (first + n1 - second - n1n).abs()
