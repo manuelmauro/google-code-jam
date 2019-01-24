@@ -22,6 +22,18 @@ impl Waffle {
         }
     }
 
+    fn chips_in(&self, t: usize, b: usize, l: usize, r: usize) -> usize {
+        let mut chips = 0;
+        for i in t..b {
+            for j in l..r {
+                chips += self.data[i][j];
+            }
+        }
+
+        chips
+    }
+
+    // Try every possible cut.
     fn _test_set_1(&self) -> String {
         let chips: usize = self.data.iter().map::<usize, _>(|row| row.iter().sum() ).sum::<usize>();
         if  chips % (self.h * self.v) != 0 {
@@ -43,17 +55,7 @@ impl Waffle {
         String::from("IMPOSSIBLE")
     }
 
-    fn chips_in(&self, t: usize, b: usize, l: usize, r: usize) -> usize {
-        let mut chips = 0;
-        for i in t..b {
-            for j in l..r {
-                chips += self.data[i][j];
-            }
-        }
-
-        chips
-    }
-
+    // Observe that only one single cut is possible (excluding empty rows/lines)
     fn _test_set_2(&self) -> String {
         let chips: usize = self.data.iter().map::<usize, _>(|row| row.iter().sum() ).sum::<usize>();
         if  chips % self.diners_count != 0 {
