@@ -21,7 +21,7 @@ impl BitParty {
         let mut robots = 0;
 
         while bits < self.b {
-            // in the case of infinite many robots this line does all the job
+            // in the case of infinitely many robots this line does all the job
             let mut min = self.cashiers
                 .iter_mut()
                 .filter(|c| c.m > c.b )
