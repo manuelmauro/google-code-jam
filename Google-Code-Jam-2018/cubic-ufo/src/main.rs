@@ -168,7 +168,7 @@ fn main() -> std::io::Result<()> {
     io::stdin().read_line(&mut n)
         .expect("Failed to read line");
 
-    let n: usize= n.trim().parse().unwrap();
+    let n: usize = n.trim().parse().unwrap();
 
     for case in 0..n {
         let mut a = String::new();

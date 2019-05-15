@@ -1,0 +1,7 @@
+[package]
+name = "foregone-solution"
+version = "0.1.0"
+authors = ["Gedl <gedl@protonmail.com>"]
+edition = "2018"
+
+[dependencies]
