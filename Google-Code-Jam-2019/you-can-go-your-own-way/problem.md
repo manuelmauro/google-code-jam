@@ -14,7 +14,7 @@ The first line of the input gives the number of test cases, T. T test cases foll
 ### Output
 For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is a string of 2N - 2 characters each of which is either uppercase E (for east) or uppercase S (for south), representing your valid path through the maze that does not conflict with Lydia's path, as described above. It is guaranteed that at least one answer exists.
 
-Limits
+### Limits
 1 ≤ T ≤ 100.
 Time limit: 15 seconds per test set.
 Memory limit: 1GB.
