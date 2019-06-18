@@ -7,33 +7,23 @@ use std::io;
 use num_bigint::BigUint;
 
 fn test_set_1(cypher_text: Vec<BigUint>) -> String {
-
+    // decode first and second primes
     let snd_char = mcd(&cypher_text[0], &cypher_text[1]);
     let fst_char = &cypher_text[0] / snd_char.clone();
 
-    let intermediate_text = unzip(fst_char, cypher_text);
-    let stele = stele_from(&intermediate_text);
-    let plain_text = translate(&intermediate_text, stele);
-
-    plain_text
-}
-
-fn unzip(fst_char: BigUint, cypher_text: Vec<BigUint>) -> Vec<BigUint> {
-    let mut plain_text = Vec::new();
-    plain_text.push(fst_char.clone());
+    // unzip cypher text
+    let mut intermediate_text = Vec::new();
+    intermediate_text.push(fst_char.clone());
 
     let mut cursor = fst_char;
     for e in cypher_text {
-        plain_text.push(&e / &cursor);
+        intermediate_text.push(&e / &cursor);
         cursor = e / cursor;
     }
 
-    plain_text
-}
-
-fn stele_from(intermediate_text: &Vec<BigUint>) -> HashMap<BigUint, char> {
+    // compute the stele
     let mut enc_alphabet = BTreeSet::new();
-    for enc_letter in intermediate_text {
+    for enc_letter in &intermediate_text {
         enc_alphabet.insert(enc_letter.clone());
     }
 
@@ -42,16 +32,13 @@ fn stele_from(intermediate_text: &Vec<BigUint>) -> HashMap<BigUint, char> {
         stele.insert(l, "ABCDEFGHIJKLMNOPQRSTUVWXYZ".chars().nth(i).unwrap());
     }
 
-    stele
-}
-
-fn translate(intermediate_text: &Vec<BigUint>, stele: HashMap<BigUint, char>) -> String {
-    let mut string = String::new();
+    // decrypt the text
+    let mut plain_text = String::new();
     for c in intermediate_text {
-        string.push(*stele.get(&c).unwrap());
+        plain_text.push(*stele.get(&c).unwrap());
     }
 
-    string
+    plain_text
 }
 
 fn mcd(x: &BigUint, y: &BigUint) -> BigUint {
@@ -71,18 +58,17 @@ fn mcd(x: &BigUint, y: &BigUint) -> BigUint {
 
 fn main() {
     let mut t = String::new();
-    io::stdin().read_line(&mut t)
-        .expect("Failed to read line");
+    io::stdin().read_line(&mut t).expect("Failed to read line");
 
     let t: usize = t.trim().parse().unwrap();
 
     for case in 0..t {
         let mut n = String::new();
-        io::stdin().read_line(&mut n)
-            .expect("Failed to read line");
+        io::stdin().read_line(&mut n).expect("Failed to read line");
 
         let mut cypher_text = String::new();
-        io::stdin().read_line(&mut cypher_text)
+        io::stdin()
+            .read_line(&mut cypher_text)
             .expect("Failed to read line");
 
         let cypher_text: Vec<BigUint> = cypher_text
